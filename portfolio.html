@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Samuel Mahlangu — Software Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- Cursor -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- Loader -->
+<div id="loader">
+  <canvas id="loader-canvas"></canvas>
+  <div class="loader-lines"></div>
+  <div class="loader-scanline"></div>
+
+  <div class="loader-corner tl">PORTFOLIO v1.0<br>© 2025</div>
+  <div class="loader-corner tr">SAMUEL MAHLANGU<br>ZA — MIDRAND</div>
+  <div class="loader-corner bl" id="loader-time">00:00:00</div>
+  <div class="loader-corner br">EDUVOS UNIVERSITY<br>B.IT SOFTWARE ENG.</div>
+
+  <div class="loader-center">
+    <div class="loader-initials" data-text="SM">SM</div>
+    <div class="loader-name-sub">Moratehi Samuel Mahlangu</div>
+    <div class="loader-progress-wrap">
+      <div class="loader-progress-bar" id="loader-bar">
+        <div class="loader-progress-dot"></div>
+        <div class="loader-progress-num" id="loader-pct">0%</div>
+      </div>
+    </div>
+    <div class="loader-glitch" id="loader-glitch">Initialising...</div>
+  </div>
+</div>
+
+<!-- Page Transition Overlay -->
+<div id="page-transition">
+  <div class="pt-panel"></div>
+  <div class="pt-panel"></div>
+  <div class="pt-panel"></div>
+  <div class="pt-panel"></div>
+  <div class="pt-panel"></div>
+</div>
+
+<!-- Full-Screen Dropdown Menu -->
+<div id="full-menu">
+  <nav class="menu-nav">
+    <ul class="menu-nav-list">
+      <li class="menu-nav-item">
+        <a href="#hero" class="menu-nav-link menu-link">
+          <div><span class="menu-nav-num">01</span><span class="menu-nav-label">Home</span></div>
+          <span class="menu-nav-arrow">→</span>
+        </a>
+      </li>
+      <li class="menu-nav-item">
+        <a href="#about" class="menu-nav-link menu-link">
+          <div><span class="menu-nav-num">02</span><span class="menu-nav-label">About</span></div>
+          <span class="menu-nav-arrow">→</span>
+        </a>
+      </li>
+      <li class="menu-nav-item">
+        <a href="#skills" class="menu-nav-link menu-link">
+          <div><span class="menu-nav-num">03</span><span class="menu-nav-label">Skills</span></div>
+          <span class="menu-nav-arrow">→</span>
+        </a>
+      </li>
+      <li class="menu-nav-item">
+        <a href="#projects" class="menu-nav-link menu-link">
+          <div><span class="menu-nav-num">04</span><span class="menu-nav-label">Projects</span></div>
+          <span class="menu-nav-arrow">→</span>
+        </a>
+      </li>
+      <li class="menu-nav-item">
+        <a href="#contact" class="menu-nav-link menu-link">
+          <div><span class="menu-nav-num">05</span><span class="menu-nav-label">Contact</span></div>
+          <span class="menu-nav-arrow">→</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <aside class="menu-aside">
+    <div>
+      <p class="menu-aside-label">Contact</p>
+      <ul class="menu-contact-list">
+        <li><span class="menu-contact-label">Email:</span> <a href="mailto:samuelmoratehimahlangu@gmail.com">samuelmoratehimahlangu@gmail.com</a></li>
+        <li><span class="menu-contact-label">Phone:</span> <a href="tel:0817765744">081 776 5744</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="menu-aside-label">Socials</p>
+      <div class="menu-social-row">
+        <a href="https://github.com/00carterdedsec" target="_blank" class="menu-social-link">GitHub</a>
+        <a href="https://www.linkedin.com/in/samuel-moratehi-mahlangu-788ba91aa/" target="_blank" class="menu-social-link">LinkedIn</a>
+      </div>
+    </div>
+    <p class="menu-tagline">"Building purposeful digital experiences, one line at a time."</p>
+  </aside>
+</div>
+
+<!-- Nav -->
+<nav id="main-nav">
+  <a href="#hero" class="nav-logo menu-link">SM</a>
+  <ul class="nav-links">
+    <li><a href="#about" class="menu-link">About</a></li>
+    <li><a href="#skills" class="menu-link">Skills</a></li>
+    <li><a href="#projects" class="menu-link">Projects</a></li>
+    <li><a href="#contact" class="menu-link">Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" id="menu-toggle" aria-label="Toggle menu">
+    <span class="ham-line"></span>
+    <span class="ham-line"></span>
+    <span class="ham-line"></span>
+  </button>
+</nav>
+
+<!-- Hero -->
+<section id="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Software Engineer</p>
+    <h1 class="hero-name">
+      Moratehi<br><em>Samuel</em><br>Mahlangu
+    </h1>
+    <p class="hero-tagline">
+      A software engineering student with an eye for elegance — building purposeful digital experiences from the ground up.
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn-primary menu-link"><span>View Work</span></a>
+      <a href="#contact" class="btn-ghost menu-link">
+        Let's Connect
+        <svg width="16" height="10" viewBox="0 0 16 10" fill="none">
+          <path d="M1 5h14M10 1l5 4-5 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-badge-ring">
+      <svg viewBox="0 0 200 200" class="hero-badge-svg">
+        <defs>
+          <path id="circle-text" d="M100,100 m-70,0 a70,70 0 1,1 140,0 a70,70 0 1,1 -140,0"/>
+        </defs>
+        <text class="hero-badge-text">
+          <textPath href="#circle-text" startOffset="0%">EDUVOS UNIVERSITY · B.IT SOFTWARE ENGINEERING · 2025 ·&nbsp;</textPath>
+        </text>
+      </svg>
+      <div class="hero-badge-center">SM</div>
+    </div>
+  </div>
+  <div class="hero-number">01</div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about">
+  <div class="section-header reveal">
+    <span class="section-num">02</span>
+    <h2 class="section-title js-split-title">About <em>me</em></h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="about-grid">
+    <div>
+      <div class="about-education reveal reveal-delay-1">
+        <p class="edu-school js-scramble">Eduvos — Midrand Campus</p>
+        <p class="edu-degree">Bachelor of Information Technology in Software Engineering</p>
+        <p class="edu-detail">Currently Enrolled &nbsp;·&nbsp; Expected Graduation 2028</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-item reveal reveal-delay-2" data-count="1" data-suffix="+">
+          <div class="stat-num">0<span>+</span></div>
+          <div class="stat-label">Years Studying</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-3" data-count="3" data-suffix="+">
+          <div class="stat-num">0<span>+</span></div>
+          <div class="stat-label">Projects Built</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-2" data-count="4" data-suffix="+">
+          <div class="stat-num">0<span>+</span></div>
+          <div class="stat-label">Languages</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-3" data-count="0" data-suffix="∞">
+          <div class="stat-num">∞</div>
+          <div class="stat-label">Problems to Solve</div>
+        </div>
+      </div>
+    </div>
+    <div class="reveal reveal-delay-2">
+      <p class="about-label"><span class="about-label-inner">Who I Am</span></p>
+      <div class="about-body js-bio">
+        <p>I'm Samuel — a first-year software engineering student at Eduvos Midrand, who started this journey in 2025 with a clear goal: to become a developer who builds things that actually matter.</p>
+        <p>I believe great software isn't just about working code — it's about thoughtful architecture, clean interfaces, and solutions that genuinely serve people. I'm still early in my path, but I bring curiosity, consistency, and care to everything I touch.</p>
+        <p>By 2027 I'll be in my third year, and by 2028 I'll graduate — but the learning never stops. I'm already exploring tools, languages, and ideas that are shaping who I'll be as an engineer.</p>
+      </div>
+    </div>
+    <div class="about-photo-wrap reveal reveal-delay-1">
+        <div class="about-photo-frame">
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+  <div class="section-header reveal">
+    <span class="section-num">03</span>
+    <h2 class="section-title js-split-title"><em>Core</em> Skills</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="skills-grid">
+
+    <!-- Languages -->
+    <div class="skill-category">
+      <p class="skill-cat-label"><span class="skill-cat-label-inner">Languages</span></p>
+      <ul class="skill-list">
+        <li class="skill-item"><span class="skill-dot"></span> <span class="skill-item-inner">Java</span></li>
+        <li class="skill-item"><span class="skill-dot"></span> <span class="skill-item-inner">C++</span></li>
+        <li class="skill-item"><span class="skill-dot"></span> <span class="skill-item-inner">JavaScript</span></li>
+      </ul>
+      <div class="skill-bar-wrap"><div class="skill-bar-fill"></div></div>
+    </div>
+
+    <!-- Frontend -->
+    <div class="skill-category">
+      <p class="skill-cat-label"><span class="skill-cat-label-inner">Frontend</span></p>
+      <ul class="skill-list">
+        <li class="skill-item"><span class="skill-dot"></span> <span class="skill-item-inner">HTML5</span></li>
+        <li class="skill-item"><span class="skill-dot"></span> <span class="skill-item-inner">CSS3</span></li>
+        <li class="skill-item"><span class="skill-dot"></span> <span class="skill-item-inner">Responsive Design</span></li>
+      </ul>
+      <div class="skill-bar-wrap"><div class="skill-bar-fill"></div></div>
+    </div>
+
+    <!-- Tools -->
+    <div class="skill-category">
+      <p class="skill-cat-label"><span class="skill-cat-label-inner">Tools</span></p>
+      <ul class="skill-list">
+        <li class="skill-item"><span class="skill-dot"></span> <span class="skill-item-inner">Git & GitHub</span></li>
+        <li class="skill-item"><span class="skill-dot"></span> <span class="skill-item-inner">VS Code</span></li>
+        <li class="skill-item"><span class="skill-dot"></span> <span class="skill-item-inner">Problem Solving</span></li>
+      </ul>
+      <div class="skill-bar-wrap"><div class="skill-bar-fill"></div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+  <div class="section-header reveal">
+    <span class="section-num">04</span>
+    <h2 class="section-title js-split-title">Featured <em>Work</em></h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="projects-list">
+
+    <!-- Project 1 -->
+    <a href="https://github.com/00carterdedsec/portfolio" target="_blank" class="project-item">
+      <span class="project-num">01</span>
+      <div class="project-info">
+        <h3 class="project-name"><span class="project-name-inner">Personal Portfolio</span></h3>
+        <p class="project-desc">A hand-crafted portfolio site featuring a Three.js particle loader, scroll-triggered animations, a full-screen overlay menu, and smooth page transitions — built entirely with vanilla HTML, CSS, and JavaScript.</p>
+        <div class="project-tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Three.js</span>
+        </div>
+      </div>
+      <span class="project-arrow project-github-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+        </svg>
+      </span>
+    </a>
+
+    <!-- Project 2 -->
+    <a href="https://github.com/00carterdedsec/student-grade-calculator" target="_blank" class="project-item">
+      <span class="project-num">02</span>
+      <div class="project-info">
+        <h3 class="project-name"><span class="project-name-inner">Student Grade Calculator</span></h3>
+        <p class="project-desc">A Java console application that takes in student marks across multiple subjects, computes averages, assigns letter grades, and generates a formatted report — demonstrating OOP principles, arrays, and control flow.</p>
+        <div class="project-tags">
+          <span class="tag">Java</span>
+          <span class="tag">OOP</span>
+          <span class="tag">Console App</span>
+        </div>
+      </div>
+      <span class="project-arrow project-github-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+        </svg>
+      </span>
+    </a>
+
+    <!-- Project 3 -->
+    <a href="https://github.com/00carterdedsec/number-guessing-game" target="_blank" class="project-item">
+      <span class="project-num">03</span>
+      <div class="project-info">
+        <h3 class="project-name"><span class="project-name-inner">Number Guessing Game</span></h3>
+        <p class="project-desc">An interactive C++ command-line game with difficulty levels, a random number engine, attempt tracking, and a high-score leaderboard persisted to file — exploring loops, conditionals, and file I/O.</p>
+        <div class="project-tags">
+          <span class="tag">C++</span>
+          <span class="tag">File I/O</span>
+          <span class="tag">Game Logic</span>
+        </div>
+      </div>
+      <span class="project-arrow project-github-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+        </svg>
+      </span>
+    </a>
+
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="section-header reveal">
+    <span class="section-num">05</span>
+    <h2 class="section-title js-split-title">Let's <em>Connect</em></h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="contact-inner">
+    <p class="contact-statement js-contact-words">
+      <span class="contact-word">Interested</span>
+      <span class="contact-word">in</span>
+      <span class="contact-word">connecting?</span>
+      <span class="contact-word">I'd</span>
+      <span class="contact-word">love</span>
+      <span class="contact-word">to</span>
+      <span class="contact-word">hear</span>
+      <span class="contact-word">from</span>
+      <span class="contact-word">you.</span>
+    </p>
+    <div class="contact-links">
+      <a href="mailto:samuelmoratehimahlangu@gmail.com" class="contact-link reveal reveal-delay-1">
+        <span class="contact-link-label">Email</span>
+        <span class="contact-link-val">samuelmoratehimahlangu@gmail.com</span>
+      </a>
+      <a href="tel:0817765744" class="contact-link reveal reveal-delay-2">
+        <span class="contact-link-label">Phone</span>
+        <span class="contact-link-val">081 776 5744</span>
+      </a>
+      <a href="https://github.com/00carterdedsec" target="_blank" class="contact-social-link reveal reveal-delay-3">
+        GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/samuel-moratehi-mahlangu-788ba91aa/" target="_blank" class="contact-social-link reveal reveal-delay-4">
+        LinkedIn
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <span>© 2025 Moratehi Samuel Mahlangu</span>
+  <span>Built with precision &amp; intention</span>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
